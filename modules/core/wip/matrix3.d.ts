@@ -1,7 +1,7 @@
 import Matrix from './base/matrix';
 // import Quaternion from './quaternion';
 
-export default class Matrix3 extends Matrix<Matrix3> {
+export default class Matrix3 extends Matrix {
   static IDENTITY: Matrix3;
   static ZERO: Matrix3;
 
@@ -24,7 +24,7 @@ export default class Matrix3 extends Matrix<Matrix3> {
     m22: number
   );
 
-  copy(array): Matrix3;
+  copy(array): this;
 
   // accepts column major order, stores in column major order
   // eslint-disable-next-line max-params
